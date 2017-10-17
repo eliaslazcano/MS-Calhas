@@ -11,10 +11,11 @@ C:\Users\Elias Neto\source\repos\MS Calhas\MS Calhas\obj\Debug\MS Calhas.pdb
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\MS Calhas.exe.config
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\MS Calhas.exe
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\MS Calhas.pdb
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csprojResolveAssemblyReference.cache
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.Form1.resources
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.Properties.Resources.resources
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.GenerateResource.Cache
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.CoreCompileInputs.cache
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.exe
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.pdb
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.Principal.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.Resumo.resources

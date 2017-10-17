@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MS_Calhas.View;
 
 namespace MS_Calhas
 {
@@ -24,7 +25,9 @@ namespace MS_Calhas
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var form = new Principal();
+            form.Show();
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
