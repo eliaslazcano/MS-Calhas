@@ -44,6 +44,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(280, 27);
             this.txtNome.TabIndex = 0;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // btnGravar
             // 
@@ -54,6 +55,7 @@
             this.btnGravar.Size = new System.Drawing.Size(40, 40);
             this.btnGravar.TabIndex = 1;
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnCancelar
             // 

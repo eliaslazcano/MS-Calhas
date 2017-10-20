@@ -45,15 +45,19 @@
             // 
             // listaFuncionarios
             // 
-            this.listaFuncionarios.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.listaFuncionarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listaFuncionarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.listaFuncionarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listaFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colunaId,
             this.colunaNome});
-            this.listaFuncionarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listaFuncionarios.Location = new System.Drawing.Point(3, 56);
+            this.listaFuncionarios.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listaFuncionarios.ForeColor = System.Drawing.Color.Black;
+            this.listaFuncionarios.FullRowSelect = true;
+            this.listaFuncionarios.GridLines = true;
+            this.listaFuncionarios.Location = new System.Drawing.Point(6, 56);
+            this.listaFuncionarios.MultiSelect = false;
             this.listaFuncionarios.Name = "listaFuncionarios";
-            this.listaFuncionarios.Size = new System.Drawing.Size(635, 326);
+            this.listaFuncionarios.Size = new System.Drawing.Size(630, 324);
             this.listaFuncionarios.TabIndex = 4;
             this.listaFuncionarios.UseCompatibleStateImageBehavior = false;
             this.listaFuncionarios.View = System.Windows.Forms.View.Details;
@@ -61,11 +65,12 @@
             // colunaId
             // 
             this.colunaId.Text = "ID";
+            this.colunaId.Width = 40;
             // 
             // colunaNome
             // 
             this.colunaNome.Text = "Nome";
-            this.colunaNome.Width = 300;
+            this.colunaNome.Width = 500;
             // 
             // btnNovo
             // 
@@ -93,6 +98,7 @@
             this.btnAlterar.TabIndex = 2;
             this.informante.SetToolTip(this.btnAlterar, "Alterar Funcionário");
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
@@ -106,6 +112,7 @@
             this.btnExcluir.TabIndex = 3;
             this.informante.SetToolTip(this.btnExcluir, "Excluir funcionário");
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // pictureBox1
             // 
@@ -145,6 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.pictureBox1);

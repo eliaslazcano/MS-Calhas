@@ -175,5 +175,5 @@ D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Deb
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Interactive.Async.xml
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.MS Calhas.exe.config
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csprojResolveAssemblyReference.cache
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.NovoFuncionario.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csprojResolveAssemblyReference.cache

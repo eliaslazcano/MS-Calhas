@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MS_Calhas.Model
 {
-    class Funcionario
+    public class Funcionario
     {
         public int FuncionarioId { get; set; }
         public string Nome { get; set; }

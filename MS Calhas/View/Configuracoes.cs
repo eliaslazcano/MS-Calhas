@@ -23,6 +23,7 @@ namespace MS_Calhas.View
             this.Controls.Remove(subTela);
             indicador.Left = botao.Left;
             subTela = tela;
+            subTela.Left = 0;
             subTela.Top = 113;
             this.Controls.Add(subTela);
         }

@@ -21,8 +21,9 @@ namespace MS_Calhas.View
             AtualizaLista();
         }
         //======Métodos ajudantes======
-        private void AtualizaLista()
+        private void AtualizaLista()//atualiza a lista de funcionarios em ordem de Nome Acrescente
         {
+            listaFuncionarios.Items.Clear();
             List<Funcionario> funcionarios;
             using(var banco = new Banco())
             {
@@ -35,15 +36,63 @@ namespace MS_Calhas.View
                 listaFuncionarios.Items.Add(item);
             }
         }
+        private Funcionario ItemSelecionado()//retorna o funcionario selecionado, Null caso não haja um selecionado.
+        {
+            try
+            {
+                var id = listaFuncionarios.SelectedItems[0].SubItems[0].Text;
+                Funcionario consulta;
+                using (var banco = new Banco())
+                {
+                    consulta = banco.Funcionarios.Find(Convert.ToInt32(id));
+                }
+                return consulta;
+            }
+            catch (Exception erro)
+            {
+                return null;
+            }            
+        }
         //=====Ações da interface======
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            var form = new NovoFuncionario(this);
+            var form = new NovoFuncionario(null);
             form.ShowDialog();
+            AtualizaLista();
         }
         private void ControleFuncionario_Load(object sender, EventArgs e)
         {
 
+        }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if(ItemSelecionado() != null)
+            {
+                using (var dao = new Banco())
+                {
+                    dao.Funcionarios.Remove(ItemSelecionado());
+                    dao.SaveChanges();
+                }
+                AtualizaLista();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um funcionário da lista primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (ItemSelecionado() != null)
+            {
+                var form = new NovoFuncionario(ItemSelecionado());
+                form.ShowDialog();
+                AtualizaLista();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um funcionário da lista primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
