@@ -8,33 +8,11 @@ C:\Users\Elias Neto\source\repos\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.
 C:\Users\Elias Neto\source\repos\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.CoreCompileInputs.cache
 C:\Users\Elias Neto\source\repos\MS Calhas\MS Calhas\obj\Debug\MS Calhas.exe
 C:\Users\Elias Neto\source\repos\MS Calhas\MS Calhas\obj\Debug\MS Calhas.pdb
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\x86\e_sqlite3.dll
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\x64\e_sqlite3.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\MS Calhas.exe.config
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\MS Calhas.exe
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\MS Calhas.pdb
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.dll
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.WinForms.dll
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.Wpf.dll
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.pdb
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.xml
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.WinForms.pdb
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.WinForms.xml
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.Wpf.pdb
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.Wpf.xml
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.Form1.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.Properties.Resources.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.Principal.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.Resumo.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.GenerateResource.Cache
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.CoreCompileInputs.cache
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.exe
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.pdb
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.Configuracoes.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.ControlePU.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.ControleUsuario.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.ControleFuncionario.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.ControleCheques.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\x86\e_sqlite3.dll
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\x64\e_sqlite3.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\Microsoft.Win32.Primitives.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\netstandard.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.AppContext.dll
@@ -131,6 +109,9 @@ D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Deb
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Xml.XmlSerializer.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Xml.XPath.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Xml.XPath.XDocument.dll
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.dll
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.WinForms.dll
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.Wpf.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\Microsoft.Data.Sqlite.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\Microsoft.EntityFrameworkCore.dll
@@ -155,6 +136,12 @@ D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Deb
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Interactive.Async.dll
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.pdb
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.xml
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.WinForms.pdb
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.WinForms.xml
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.Wpf.pdb
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\LiveCharts.Wpf.xml
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\Microsoft.Data.Sqlite.xml
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\Microsoft.EntityFrameworkCore.xml
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
@@ -175,5 +162,21 @@ D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Deb
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Interactive.Async.xml
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.MS Calhas.exe.config
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.Form1.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.Properties.Resources.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.AdicionarCheque.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.CompensarCheque.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.Configuracoes.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.ConfirmaSenha.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.ControleCheques.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.ControleFuncionario.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.ControlePU.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.ControleUsuario.resources
 D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.NovoFuncionario.resources
-D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csprojResolveAssemblyReference.cache
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.Principal.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.Resumo.resources
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.GenerateResource.Cache
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.csproj.CoreCompileInputs.cache
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.exe
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS Calhas.pdb
+D:\Elias Neto\Documentos\Visual Studio 2017\Projects\MS Calhas\MS Calhas\obj\Debug\MS_Calhas.View.Creditos.resources

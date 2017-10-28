@@ -10,7 +10,7 @@ using System;
 namespace MS_Calhas.Migrations
 {
     [DbContext(typeof(Banco))]
-    [Migration("20171019212250_Inicial")]
+    [Migration("20171025051813_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,10 +19,40 @@ namespace MS_Calhas.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.0-rtm-26452");
 
+            modelBuilder.Entity("MS_Calhas.Model.Cheque", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Banco");
+
+                    b.Property<string>("Cliente");
+
+                    b.Property<string>("CodBanco");
+
+                    b.Property<bool>("Compensado");
+
+                    b.Property<string>("Conta");
+
+                    b.Property<string>("DataCheque");
+
+                    b.Property<string>("DataCompensacao");
+
+                    b.Property<string>("NumCheque");
+
+                    b.Property<double>("Valor");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cheques");
+                });
+
             modelBuilder.Entity("MS_Calhas.Model.Funcionario", b =>
                 {
                     b.Property<int>("FuncionarioId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Cargo");
 
                     b.Property<string>("Nome");
 
@@ -35,6 +65,8 @@ namespace MS_Calhas.Migrations
                 {
                     b.Property<int>("UsuarioId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<int>("DataCadastro");
 
                     b.Property<string>("Nome");
 

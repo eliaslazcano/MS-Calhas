@@ -15,8 +15,10 @@ namespace MS_Calhas.View
         public ControlePU()
         {
             InitializeComponent();
-            this.Top = 60;
-            this.Left = 206;
+            this.Top = 55;
+            this.Left = 201;
+            this.Dock = DockStyle.Fill;
+            //this.Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Right);
         }
     }
 }

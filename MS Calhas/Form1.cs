@@ -32,15 +32,17 @@ namespace MS_Calhas
 
         private void EfetuarLogin() //aqui de fato efetua o login no sistema
         {
+            //login do desenvolvedor
             if(txtNome.Text == "admin" && txtSenha.Text == "admin")
             {
-                Repositorio.usuarioAtivo = new Usuario() { Nome = "Desenvolvedor", Senha = "admin" };
+                Repositorio.usuarioAtivo = new Usuario() { Nome = "MAIKON", Senha = "admin", DataCadastro = Repositorio.DataAtualInt() };
                 var form = new Principal();
                 form.Show();
                 this.Hide();
                 return;
             }
 
+            //login comum
             var usuario = new Usuario() { Nome = txtNome.Text.ToUpper(), Senha = txtSenha.Text};
             List<Usuario> consulta;
             using(var banco = new Banco())
@@ -52,6 +54,25 @@ namespace MS_Calhas
                 if(usuario.Senha == consulta.First().Senha)//valida senha
                 {
                     //acesso autorizado:
+
+                    if (consulta.First().Violacao)
+                    {
+                        //Se a conta foi violada então:
+                        MessageBox.Show("Atenção!" +
+                            "\nHouve uma tentativa fracassada de tentarem mudar sua senha de acesso no dia " +
+                            consulta.First().DataViolacao +
+                            " às " +
+                            consulta.First().HoraViolacao +
+                            "\nFique atento, recomenda-se mudar sua senha.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        consulta.First().Violacao = false;
+                        using (var banco = new Banco())
+                        {
+                            banco.Usuarios.Update(consulta.First());
+                            banco.SaveChanges();
+                        }
+                    }
+                    //
+
                     Repositorio.usuarioAtivo = consulta.First();
                     var form = new Principal();
                     form.Show();

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelDataHoje = new System.Windows.Forms.Label();
             this.propaganda = new System.Windows.Forms.Label();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.btnPU = new System.Windows.Forms.Button();
@@ -44,9 +45,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtUser = new System.Windows.Forms.Label();
             this.btnConfig = new System.Windows.Forms.Button();
+            this.btnMaximizar = new System.Windows.Forms.Button();
             this.mensagem = new System.Windows.Forms.ToolTip(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -56,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.labelDataHoje);
             this.panel1.Controls.Add(this.propaganda);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.btnPU);
@@ -65,17 +69,31 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 560);
+            this.panel1.Size = new System.Drawing.Size(179, 560);
             this.panel1.TabIndex = 0;
+            // 
+            // labelDataHoje
+            // 
+            this.labelDataHoje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelDataHoje.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDataHoje.ForeColor = System.Drawing.Color.White;
+            this.labelDataHoje.Location = new System.Drawing.Point(3, 517);
+            this.labelDataHoje.Name = "labelDataHoje";
+            this.labelDataHoje.Size = new System.Drawing.Size(173, 23);
+            this.labelDataHoje.TabIndex = 6;
+            this.labelDataHoje.Text = "00/00/0000";
+            this.labelDataHoje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // propaganda
             // 
+            this.propaganda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.propaganda.AutoSize = true;
-            this.propaganda.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.propaganda.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.propaganda.ForeColor = System.Drawing.Color.White;
-            this.propaganda.Location = new System.Drawing.Point(6, 535);
+            this.propaganda.Location = new System.Drawing.Point(2, 540);
+            this.propaganda.Margin = new System.Windows.Forms.Padding(0);
             this.propaganda.Name = "propaganda";
-            this.propaganda.Size = new System.Drawing.Size(189, 17);
+            this.propaganda.Size = new System.Drawing.Size(175, 17);
             this.propaganda.TabIndex = 5;
             this.propaganda.Text = "Desenvolvido por Elias Neto";
             this.propaganda.Click += new System.EventHandler(this.propaganda_Click);
@@ -98,9 +116,9 @@
             this.btnPU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPU.Location = new System.Drawing.Point(12, 211);
             this.btnPU.Name = "btnPU";
-            this.btnPU.Size = new System.Drawing.Size(188, 54);
+            this.btnPU.Size = new System.Drawing.Size(167, 54);
             this.btnPU.TabIndex = 4;
-            this.btnPU.Text = "    Controle PU";
+            this.btnPU.Text = " Controle PU";
             this.btnPU.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPU.UseVisualStyleBackColor = true;
             this.btnPU.Click += new System.EventHandler(this.btnPU_Click);
@@ -115,9 +133,9 @@
             this.btnCheques.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCheques.Location = new System.Drawing.Point(12, 151);
             this.btnCheques.Name = "btnCheques";
-            this.btnCheques.Size = new System.Drawing.Size(188, 54);
+            this.btnCheques.Size = new System.Drawing.Size(167, 54);
             this.btnCheques.TabIndex = 4;
-            this.btnCheques.Text = "    Cheques";
+            this.btnCheques.Text = " Cheques";
             this.btnCheques.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCheques.UseVisualStyleBackColor = true;
             this.btnCheques.Click += new System.EventHandler(this.btnCheques_Click);
@@ -132,9 +150,9 @@
             this.btnResumo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnResumo.Location = new System.Drawing.Point(12, 91);
             this.btnResumo.Name = "btnResumo";
-            this.btnResumo.Size = new System.Drawing.Size(188, 54);
+            this.btnResumo.Size = new System.Drawing.Size(167, 54);
             this.btnResumo.TabIndex = 2;
-            this.btnResumo.Text = "    Resumo";
+            this.btnResumo.Text = " Resumo";
             this.btnResumo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnResumo.UseVisualStyleBackColor = true;
             this.btnResumo.Click += new System.EventHandler(this.button1_Click);
@@ -142,7 +160,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(43, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,9 +171,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(82)))), ((int)(((byte)(84)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Location = new System.Drawing.Point(179, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 10);
+            this.panel2.Size = new System.Drawing.Size(845, 10);
             this.panel2.TabIndex = 1;
             this.mensagem.SetToolTip(this.panel2, "Arrastar");
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
@@ -164,12 +182,13 @@
             // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.FlatAppearance.BorderSize = 0;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(721, 6);
+            this.btnMinimizar.Location = new System.Drawing.Point(742, 6);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(28, 28);
             this.btnMinimizar.TabIndex = 4;
@@ -180,12 +199,13 @@
             // 
             // btnFechar
             // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.ForeColor = System.Drawing.Color.White;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(755, 6);
+            this.btnFechar.Location = new System.Drawing.Point(812, 6);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(28, 28);
             this.btnFechar.TabIndex = 4;
@@ -208,13 +228,16 @@
             this.panel5.BackColor = System.Drawing.SystemColors.Window;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.txtUser);
+            this.panel5.Controls.Add(this.btnInfo);
             this.panel5.Controls.Add(this.btnConfig);
+            this.panel5.Controls.Add(this.btnMaximizar);
             this.panel5.Controls.Add(this.btnMinimizar);
             this.panel5.Controls.Add(this.pictureBox2);
             this.panel5.Controls.Add(this.btnFechar);
-            this.panel5.Location = new System.Drawing.Point(201, 11);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(179, 10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(788, 43);
+            this.panel5.Size = new System.Drawing.Size(845, 43);
             this.panel5.TabIndex = 6;
             // 
             // txtUser
@@ -233,12 +256,13 @@
             // 
             // btnConfig
             // 
+            this.btnConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConfig.FlatAppearance.BorderSize = 0;
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfig.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfig.ForeColor = System.Drawing.Color.White;
             this.btnConfig.Image = ((System.Drawing.Image)(resources.GetObject("btnConfig.Image")));
-            this.btnConfig.Location = new System.Drawing.Point(687, 6);
+            this.btnConfig.Location = new System.Drawing.Point(707, 6);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(28, 28);
             this.btnConfig.TabIndex = 4;
@@ -246,6 +270,23 @@
             this.mensagem.SetToolTip(this.btnConfig, "Configurações");
             this.btnConfig.UseVisualStyleBackColor = true;
             this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.FlatAppearance.BorderSize = 0;
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaximizar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
+            this.btnMaximizar.Location = new System.Drawing.Point(777, 6);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(28, 28);
+            this.btnMaximizar.TabIndex = 4;
+            this.btnMaximizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.mensagem.SetToolTip(this.btnMaximizar, "Ampliar");
+            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // mensagem
             // 
@@ -257,26 +298,43 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(82)))), ((int)(((byte)(84)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(990, 10);
+            this.panel3.Location = new System.Drawing.Point(1014, 53);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 550);
+            this.panel3.Size = new System.Drawing.Size(10, 507);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(82)))), ((int)(((byte)(84)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(200, 550);
+            this.panel4.Location = new System.Drawing.Point(179, 550);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(790, 10);
+            this.panel4.Size = new System.Drawing.Size(835, 10);
             this.panel4.TabIndex = 7;
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.Color.White;
+            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
+            this.btnInfo.Location = new System.Drawing.Point(647, 6);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(28, 28);
+            this.btnInfo.TabIndex = 4;
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.mensagem.SetToolTip(this.btnInfo, "Informações do desenvolvedor");
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1000, 560);
+            this.ClientSize = new System.Drawing.Size(1024, 560);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
@@ -317,5 +375,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label propaganda;
+        private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Label labelDataHoje;
+        private System.Windows.Forms.Button btnInfo;
     }
 }

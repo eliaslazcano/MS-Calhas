@@ -18,6 +18,7 @@ namespace MS_Calhas.View
         ControleCheques telaCheques = new ControleCheques();//instancia Tela Cheques
         ControlePU telaPU = new ControlePU();//instancia Tela Controle PU
         bool mover;
+        bool maximizado = false;
         private int cX, cY;
         //==========Construtor=========
         public Principal()
@@ -28,6 +29,7 @@ namespace MS_Calhas.View
             this.Controls.Add(telaPU);
 
             txtUser.Text = Repositorio.usuarioAtivo.Nome;
+            labelDataHoje.Text = Repositorio.DataAtualInt().DataParaString();
         }
         //======Métodos ajudantes======
         private void MostrarTela(UserControl tela, Button botao)
@@ -40,8 +42,7 @@ namespace MS_Calhas.View
         {
             //trexo que tenta re-executar a tela do zero (animações), mas que não deixe acumular memória ram.
             this.Controls.Remove(telaResumo);
-            telaResumo.Dispose();
-            telaResumo = null;
+            telaResumo.Dispose();//aqui libera memoria
             telaResumo = new Resumo();
             this.Controls.Add(telaResumo);
 
@@ -63,7 +64,7 @@ namespace MS_Calhas.View
         {
 
         }
-        private void btnMinimizar_Click(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)//Botão "MINIMIZAR"
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -85,14 +86,37 @@ namespace MS_Calhas.View
         {
             var form = new Configuracoes();
             form.ShowDialog();
+            txtUser.Text = Repositorio.usuarioAtivo.Nome;
         }
         private void Principal_Load(object sender, EventArgs e)
         {
+            MostrarTela(telaResumo, btnResumo);
         }
         private void propaganda_Click(object sender, EventArgs e)
         {
             
         }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)//Botão "Maximizar"
+        {
+            if (!maximizado)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                maximizado = true;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                maximizado = false;
+            }            
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            var creditos = new Creditos();
+            creditos.Show();
+        }
+
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (mover)

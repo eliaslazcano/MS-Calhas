@@ -43,7 +43,6 @@
             this.graficoPU.Size = new System.Drawing.Size(772, 267);
             this.graficoPU.TabIndex = 1;
             this.graficoPU.Text = "cartesianChart1";
-            this.graficoPU.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.graficoPU_ChildChanged);
             // 
             // graficoCheque
             // 
@@ -80,14 +79,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.graficoCheque);
             this.Controls.Add(this.graficoPU);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "Resumo";
-            this.Size = new System.Drawing.Size(778, 484);
+            this.Size = new System.Drawing.Size(835, 497);
             this.Load += new System.EventHandler(this.Resumo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

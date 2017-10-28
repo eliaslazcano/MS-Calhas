@@ -10,5 +10,6 @@ namespace MS_Calhas.Model
     {
         public int FuncionarioId { get; set; }
         public string Nome { get; set; }
+        public string Cargo { get; set; }
     }
 }

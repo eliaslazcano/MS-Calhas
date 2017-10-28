@@ -40,6 +40,7 @@
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.informante = new System.Windows.Forms.ToolTip(this.components);
+            this.colunaCargo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             this.listaFuncionarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listaFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colunaId,
-            this.colunaNome});
+            this.colunaNome,
+            this.colunaCargo});
             this.listaFuncionarios.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listaFuncionarios.ForeColor = System.Drawing.Color.Black;
             this.listaFuncionarios.FullRowSelect = true;
@@ -70,7 +72,7 @@
             // colunaNome
             // 
             this.colunaNome.Text = "Nome";
-            this.colunaNome.Width = 500;
+            this.colunaNome.Width = 320;
             // 
             // btnNovo
             // 
@@ -131,6 +133,7 @@
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(212, 27);
             this.txtFiltro.TabIndex = 0;
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
             // label1
             // 
@@ -147,6 +150,11 @@
             // 
             this.informante.AutomaticDelay = 200;
             // 
+            // colunaCargo
+            // 
+            this.colunaCargo.Text = "Cargo";
+            this.colunaCargo.Width = 260;
+            // 
             // ControleFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +170,6 @@
             this.Controls.Add(this.listaFuncionarios);
             this.Name = "ControleFuncionario";
             this.Size = new System.Drawing.Size(641, 385);
-            this.Load += new System.EventHandler(this.ControleFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -181,5 +188,6 @@
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip informante;
+        private System.Windows.Forms.ColumnHeader colunaCargo;
     }
 }

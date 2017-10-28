@@ -16,22 +16,25 @@ namespace MS_Calhas.View
 {
     public partial class Resumo : UserControl
     {
+        //==========Variaveis==========
+        //==========Construtor=========
         public Resumo()
         {
             InitializeComponent();
             ContruirGraficoPU();
             ConstruirGraficoCheque();
-            this.Top = 60;
-            this.Left = 206;
+            this.Top = 55;
+            this.Left = 201;
+            this.Dock = DockStyle.Fill;
+            //this.Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Right);
         }
-
         private void Resumo_Load(object sender, EventArgs e)
         {
             graficoPU.BackColor = System.Drawing.Color.White;//para nao bugar o grafico na cor preta, definimos primeiro Red e dps White
             graficoCheque.BackColor = System.Drawing.Color.White;
         }
-
-        private void ContruirGraficoPU()
+        //======Métodos ajudantes======
+        public void ContruirGraficoPU()
         {
             graficoPU.Series = new SeriesCollection
             {
@@ -54,12 +57,12 @@ namespace MS_Calhas.View
             graficoPU.LegendLocation = LegendLocation.Right;
             graficoPU.BackColor = System.Drawing.Color.Red;
         }
-        private void ConstruirGraficoCheque()
+        public void ConstruirGraficoCheque()
         {
             graficoCheque.From = 30;
             graficoCheque.To = 0;
             graficoCheque.Value = 8;
-            graficoCheque.Base.LabelsVisibility = Visibility.Hidden;
+            //graficoCheque.Base.LabelsVisibility = Visibility.Hidden;
             graficoCheque.Base.GaugeActiveFill = new LinearGradientBrush
             {
                 GradientStops = new GradientStopCollection
@@ -71,17 +74,6 @@ namespace MS_Calhas.View
             };
             graficoCheque.BackColor = System.Drawing.Color.Red;
         }
-        private void graficoPU_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
-        {
-
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            graficoCheque.BackColor = System.Drawing.Color.White;
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            graficoCheque.BackColor = System.Drawing.Color.Red;
-        }
+        //=====Ações da interface======
     }
 }

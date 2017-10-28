@@ -31,7 +31,7 @@ namespace MS_Calhas.View
             }
             foreach(var funcionario in funcionarios)
             {
-                string[] linhaArray = { Convert.ToString(funcionario.FuncionarioId), funcionario.Nome };
+                string[] linhaArray = { Convert.ToString(funcionario.FuncionarioId), funcionario.Nome, funcionario.Cargo };
                 var item = new ListViewItem(linhaArray);
                 listaFuncionarios.Items.Add(item);
             }
@@ -48,10 +48,24 @@ namespace MS_Calhas.View
                 }
                 return consulta;
             }
-            catch (Exception erro)
+            catch (Exception)
             {
                 return null;
             }            
+        }
+        private void FiltraLista(string texto)//atualiza a lista com apenas aqueles que forem semelhantes a string
+        {
+            using(var banco = new Banco())
+            {
+                var funcionarios = banco.Funcionarios.Where(x => x.Nome.ToUpper().Contains(texto.ToUpper())).OrderBy(y => y.Nome).ToList();
+                listaFuncionarios.Items.Clear();
+                foreach (var funcionario in funcionarios)
+                {
+                    string[] linhaArray = { Convert.ToString(funcionario.FuncionarioId), funcionario.Nome, funcionario.Cargo };
+                    var item = new ListViewItem(linhaArray);
+                    listaFuncionarios.Items.Add(item);
+                }
+            }
         }
         //=====Ações da interface======
         private void btnNovo_Click(object sender, EventArgs e)
@@ -60,27 +74,26 @@ namespace MS_Calhas.View
             form.ShowDialog();
             AtualizaLista();
         }
-        private void ControleFuncionario_Load(object sender, EventArgs e)
-        {
-
-        }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             if(ItemSelecionado() != null)
             {
-                using (var dao = new Banco())
+                var resposta = MessageBox.Show("Tem certeza que deseja excluir '" + ItemSelecionado().Nome + "' ?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(resposta == DialogResult.Yes)
                 {
-                    dao.Funcionarios.Remove(ItemSelecionado());
-                    dao.SaveChanges();
+                    using (var dao = new Banco())
+                    {
+                        dao.Funcionarios.Remove(ItemSelecionado());
+                        dao.SaveChanges();
+                    }
+                    AtualizaLista();
                 }
-                AtualizaLista();
             }
             else
             {
                 MessageBox.Show("Selecione um funcionário da lista primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             if (ItemSelecionado() != null)
@@ -93,6 +106,10 @@ namespace MS_Calhas.View
             {
                 MessageBox.Show("Selecione um funcionário da lista primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            FiltraLista(txtFiltro.Text);
         }
     }
 }

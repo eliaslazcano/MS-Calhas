@@ -39,6 +39,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.balao = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtData = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +65,8 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(174, 27);
             this.txtSenha.TabIndex = 4;
+            this.txtSenha.UseSystemPasswordChar = true;
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // label1
             // 
@@ -145,11 +148,9 @@
             // 
             // balao
             // 
-            this.balao.AutoPopDelay = 5000;
+            this.balao.AutomaticDelay = 250;
             this.balao.BackColor = System.Drawing.Color.Black;
             this.balao.ForeColor = System.Drawing.Color.White;
-            this.balao.InitialDelay = 250;
-            this.balao.ReshowDelay = 100;
             // 
             // pictureBox1
             // 
@@ -161,12 +162,24 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // txtData
+            // 
+            this.txtData.AutoSize = true;
+            this.txtData.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData.ForeColor = System.Drawing.Color.White;
+            this.txtData.Location = new System.Drawing.Point(415, 368);
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(227, 17);
+            this.txtData.TabIndex = 12;
+            this.txtData.Text = "sua conta existe desde 99/99/9999";
+            // 
             // ControleUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(45)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.txtData);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label2);
@@ -194,5 +207,6 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.ToolTip balao;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label txtData;
     }
 }
