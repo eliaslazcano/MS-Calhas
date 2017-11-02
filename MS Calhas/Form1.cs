@@ -15,43 +15,39 @@ namespace MS_Calhas
 {
     public partial class Form1 : Form
     {
+        //===========Construtor===========
         public Form1()
         {
             InitializeComponent();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            EfetuarLogin();
-        }
-
+        //========Metodos ajudantes=======
         private void EfetuarLogin() //aqui de fato efetua o login no sistema
         {
             //login do desenvolvedor
-            if(txtNome.Text == "admin" && txtSenha.Text == "admin")
+            using (var banco = new Banco())
             {
-                Repositorio.usuarioAtivo = new Usuario() { Nome = "MAIKON", Senha = "admin", DataCadastro = Repositorio.DataAtualInt() };
-                var form = new Principal();
-                form.Show();
-                this.Hide();
-                return;
+                var users = banco.Usuarios.ToList();
+                if (txtNome.Text == "admin" && txtSenha.Text == "admin" && users.Count == 0)
+                {
+                    Repositorio.usuarioAtivo = new Usuario() { Nome = "Acesso Temporário", Senha = "admin", DataCadastro = Repositorio.DataAtualInt() };
+                    var form = new Principal();
+                    form.Show();
+                    this.Hide();
+                    return;
+                }
             }
 
+
             //login comum
-            var usuario = new Usuario() { Nome = txtNome.Text.ToUpper(), Senha = txtSenha.Text};
+            var usuario = new Usuario() { Nome = txtNome.Text.ToUpper(), Senha = txtSenha.Text };
             List<Usuario> consulta;
-            using(var banco = new Banco())
+            using (var banco = new Banco())
             {
                 consulta = banco.Usuarios.Where(x => x.Nome == usuario.Nome).ToList();
             }
-            if(consulta.Count == 1)//valida usuario
+            if (consulta.Count == 1)//valida usuario
             {
-                if(usuario.Senha == consulta.First().Senha)//valida senha
+                if (usuario.Senha == consulta.First().Senha)//valida senha
                 {
                     //acesso autorizado:
 
@@ -88,27 +84,62 @@ namespace MS_Calhas
                 MessageBox.Show("Nome de usuário inválido", "Usuário não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        //=======Acoes da Interface=======
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EfetuarLogin();
+        }
         private void label1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void label1_MouseEnter(object sender, EventArgs e)
         {
             fechar.BorderStyle = BorderStyle.FixedSingle;
         }
-
         private void fechar_MouseLeave(object sender, EventArgs e)
         {
             fechar.BorderStyle = BorderStyle.None;
         }
-
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == 13)
             {
                 EfetuarLogin();
+            }
+        }
+        private void Form1_Load(object sender, EventArgs e)//ao carregar o form, valida a licenca de uso
+        {
+            using (var db = new Banco())
+            {
+                var consulta = db.Otimizacao.ToList();
+                if (consulta.Count == 0)
+                {
+                    var formAtivador = new Ativacao();
+                    formAtivador.ShowDialog();
+                }
+                else
+                {
+                    bool ativado = false;
+                    foreach(var x in consulta)
+                    {
+                        if (x.unification == MacAPI.obterMAC())
+                            ativado = true;
+                    }
+                    if (ativado)
+                    {
+                        //Proseguir com o login normalmente... maquina autorizada
+                    }
+                    else
+                    {
+                        var formAtivador = new Ativacao();
+                        formAtivador.ShowDialog();
+                    }
+                }
             }
         }
     }

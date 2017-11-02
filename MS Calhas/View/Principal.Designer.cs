@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelDataHoje = new System.Windows.Forms.Label();
-            this.propaganda = new System.Windows.Forms.Label();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.btnPU = new System.Windows.Forms.Button();
             this.btnCheques = new System.Windows.Forms.Button();
@@ -44,12 +43,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtUser = new System.Windows.Forms.Label();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.btnConfig = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.mensagem = new System.Windows.Forms.ToolTip(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnInfo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,7 +59,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel1.Controls.Add(this.labelDataHoje);
-            this.panel1.Controls.Add(this.propaganda);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.btnPU);
             this.panel1.Controls.Add(this.btnCheques);
@@ -77,26 +75,13 @@
             this.labelDataHoje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelDataHoje.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDataHoje.ForeColor = System.Drawing.Color.White;
-            this.labelDataHoje.Location = new System.Drawing.Point(3, 517);
+            this.labelDataHoje.Location = new System.Drawing.Point(3, 528);
             this.labelDataHoje.Name = "labelDataHoje";
             this.labelDataHoje.Size = new System.Drawing.Size(173, 23);
             this.labelDataHoje.TabIndex = 6;
             this.labelDataHoje.Text = "00/00/0000";
             this.labelDataHoje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // propaganda
-            // 
-            this.propaganda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.propaganda.AutoSize = true;
-            this.propaganda.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.propaganda.ForeColor = System.Drawing.Color.White;
-            this.propaganda.Location = new System.Drawing.Point(2, 540);
-            this.propaganda.Margin = new System.Windows.Forms.Padding(0);
-            this.propaganda.Name = "propaganda";
-            this.propaganda.Size = new System.Drawing.Size(175, 17);
-            this.propaganda.TabIndex = 5;
-            this.propaganda.Text = "Desenvolvido por Elias Neto";
-            this.propaganda.Click += new System.EventHandler(this.propaganda_Click);
+            this.labelDataHoje.Click += new System.EventHandler(this.labelDataHoje_Click);
             // 
             // SidePanel
             // 
@@ -254,6 +239,23 @@
             this.txtUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtUser.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.Color.White;
+            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
+            this.btnInfo.Location = new System.Drawing.Point(647, 6);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(28, 28);
+            this.btnInfo.TabIndex = 4;
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.mensagem.SetToolTip(this.btnInfo, "Informações do desenvolvedor");
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // btnConfig
             // 
             this.btnConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -312,23 +314,6 @@
             this.panel4.Size = new System.Drawing.Size(835, 10);
             this.panel4.TabIndex = 7;
             // 
-            // btnInfo
-            // 
-            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInfo.FlatAppearance.BorderSize = 0;
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInfo.ForeColor = System.Drawing.Color.White;
-            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
-            this.btnInfo.Location = new System.Drawing.Point(647, 6);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(28, 28);
-            this.btnInfo.TabIndex = 4;
-            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.mensagem.SetToolTip(this.btnInfo, "Informações do desenvolvedor");
-            this.btnInfo.UseVisualStyleBackColor = true;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,7 +332,6 @@
             this.Text = "MS Calhas";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -374,7 +358,6 @@
         private System.Windows.Forms.Button btnPU;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label propaganda;
         private System.Windows.Forms.Button btnMaximizar;
         private System.Windows.Forms.Label labelDataHoje;
         private System.Windows.Forms.Button btnInfo;

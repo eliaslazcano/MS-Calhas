@@ -87,6 +87,7 @@ namespace MS_Calhas.View
             var form = new Configuracoes();
             form.ShowDialog();
             txtUser.Text = Repositorio.usuarioAtivo.Nome;
+            telaPU.RecarregarLista();
         }
         private void Principal_Load(object sender, EventArgs e)
         {
@@ -115,6 +116,11 @@ namespace MS_Calhas.View
         {
             var creditos = new Creditos();
             creditos.Show();
+        }
+
+        private void labelDataHoje_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(MS_Calhas.Controller.MacAPI.obterMAC() );
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)

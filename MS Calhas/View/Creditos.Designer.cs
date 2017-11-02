@@ -39,8 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -54,7 +54,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(137, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(139, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -164,17 +164,6 @@
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(78, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 21);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "+55 (67) 9 8172-9464";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -186,14 +175,25 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "+55 (67) 9 9187-1221";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(78, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 21);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "+55 (67) 9 8172-9464";
+            // 
             // button1
             // 
-            this.button1.AutoSize = true;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(358, 2);
+            this.button1.Location = new System.Drawing.Point(374, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 48);
+            this.button1.Size = new System.Drawing.Size(33, 33);
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

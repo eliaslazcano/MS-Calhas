@@ -118,5 +118,58 @@ namespace MS_Calhas.Controller
             }
             return true;
         }
+        /// <summary>
+        /// Valida a hora de um MaskedTextBox, returna TRUE caso tudo ok. A validação confere se a hora e o minuto está preenxido e se estão dentro dos numeros aceitaveis.
+        /// </summary>
+        /// <param name="txtHora"></param>
+        /// <returns></returns>
+        public static bool HoraValidador(this MaskedTextBox txtHora)
+        {
+            string hora = txtHora.Text.Substring(0, 2);
+            string minuto = txtHora.Text.Substring(3, 2);
+
+            if (String.IsNullOrWhiteSpace(hora) || String.IsNullOrWhiteSpace(minuto) || txtHora.Text.Length != 5)
+            {
+                return false;
+            }
+            var horaInt = Convert.ToInt32(hora);
+            var minutoInt = Convert.ToInt32(minuto);
+            if (horaInt > 24 || horaInt < 0)
+            {
+                return false;
+            }
+            if (minutoInt > 60 || minutoInt < 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        public static string DataAtualString()
+        {
+            return DataAtualInt().DataParaString();
+        }
+        public static string HoraAtualString()
+        {
+            int hora = DateTime.Now.Hour;
+            int minuto = DateTime.Now.Minute;
+            string resultado = "";
+            if (hora < 10)
+            {
+                resultado += "0" + hora;
+            }
+            else
+            {
+                resultado += hora;
+            }
+            if (minuto < 10)
+            {
+                resultado += "0" + minuto;
+            }
+            else
+            {
+                resultado += minuto;
+            }
+            return resultado;
+        }
     }
 }

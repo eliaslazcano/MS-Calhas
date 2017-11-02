@@ -138,6 +138,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\MacAPI.cs" />
     <Compile Include="Controller\Repositorio.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -145,15 +146,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20171025051813_Inicial.cs" />
-    <Compile Include="Migrations\20171025051813_Inicial.designer.cs">
-      <DependentUpon>20171025051813_Inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20171027175426_Violacao.cs" />
-    <Compile Include="Migrations\20171027175426_Violacao.designer.cs">
-      <DependentUpon>20171027175426_Violacao.cs</DependentUpon>
+    <Compile Include="Migrations\20171031010817_Inicial.cs" />
+    <Compile Include="Migrations\20171031010817_Inicial.designer.cs">
+      <DependentUpon>20171031010817_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\BancoModelSnapshot.cs" />
+    <Compile Include="Model\RegistroCarga.cs" />
+    <Compile Include="Model\Section.cs" />
     <Compile Include="Model\Banco.cs" />
     <Compile Include="Model\Cheque.cs" />
     <Compile Include="Model\Funcionario.cs" />
@@ -165,6 +164,18 @@
     </Compile>
     <Compile Include="View\AdicionarCheque.Designer.cs">
       <DependentUpon>AdicionarCheque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdicionaRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdicionaRegistro.Designer.cs">
+      <DependentUpon>AdicionaRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ativacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ativacao.Designer.cs">
+      <DependentUpon>Ativacao.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CompensarCheque.cs">
       <SubType>Form</SubType>
@@ -201,6 +212,12 @@
     </Compile>
     <Compile Include="View\ControlePU.Designer.cs">
       <DependentUpon>ControlePU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ControlePU2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ControlePU2.Designer.cs">
+      <DependentUpon>ControlePU2.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ControleUsuario.cs">
       <SubType>UserControl</SubType>
@@ -247,6 +264,12 @@
     <EmbeddedResource Include="View\AdicionarCheque.resx">
       <DependentUpon>AdicionarCheque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AdicionaRegistro.resx">
+      <DependentUpon>AdicionaRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ativacao.resx">
+      <DependentUpon>Ativacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CompensarCheque.resx">
       <DependentUpon>CompensarCheque.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +288,9 @@
     <EmbeddedResource Include="View\ControlePU.resx">
       <DependentUpon>ControlePU.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ControlePU2.resx">
+      <DependentUpon>ControlePU2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ControleUsuario.resx">
       <DependentUpon>ControleUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +307,7 @@
       <DependentUpon>Resumo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\MS_Calhas.Model.RegistroCarga.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

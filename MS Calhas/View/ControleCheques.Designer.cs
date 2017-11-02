@@ -45,6 +45,7 @@
             this.msg = new System.Windows.Forms.ToolTip(this.components);
             this.btnCompensar = new System.Windows.Forms.Button();
             this.txtTotalNC = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listaCheques
@@ -175,6 +176,7 @@
             // 
             // btnCompensar
             // 
+            this.btnCompensar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCompensar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCompensar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.btnCompensar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
@@ -193,21 +195,35 @@
             // 
             // txtTotalNC
             // 
-            this.txtTotalNC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtTotalNC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotalNC.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalNC.ForeColor = System.Drawing.Color.ForestGreen;
-            this.txtTotalNC.Location = new System.Drawing.Point(0, 0);
+            this.txtTotalNC.Location = new System.Drawing.Point(0, 23);
             this.txtTotalNC.Name = "txtTotalNC";
             this.txtTotalNC.Size = new System.Drawing.Size(835, 21);
             this.txtTotalNC.TabIndex = 2;
             this.txtTotalNC.Text = "Total a descontar: x";
             this.txtTotalNC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(835, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Gerenciamento de cheques";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ControleCheques
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTotalNC);
             this.Controls.Add(this.btnCompensar);
             this.Controls.Add(this.btnExcluir);
@@ -237,5 +253,6 @@
         private System.Windows.Forms.Button btnCompensar;
         private System.Windows.Forms.Label txtTotalNC;
         public System.Windows.Forms.ToolTip msg;
+        private System.Windows.Forms.Label label1;
     }
 }

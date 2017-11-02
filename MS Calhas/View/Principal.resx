@@ -430,9 +430,6 @@
         XORYYMllMUjEAX40KgEOwKL83DUOXMAO+FEoCajigUv7C4AeQJdBbfzJAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="mensagem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="btnConfig.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -478,6 +475,9 @@
         5gkdMwTP2ISMJ1FJ2m1vAD9pqYKos7P3AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="mensagem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>40</value>
   </metadata>
